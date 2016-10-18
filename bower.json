@@ -1,0 +1,25 @@
+{
+  "name": "zuoqianduan",
+  "description": "the front-end engineer's web",
+  "main": "",
+  "keywords": [
+    "zuoqianduan"
+  ],
+  "authors": [
+    "rueen"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "public/libs"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

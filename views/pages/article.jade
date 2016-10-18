@@ -1,0 +1,15 @@
+extend ../layout
+     
+block content
+    .container.content
+        .row
+            .col-md-9
+                .article-box
+                    header.article-header
+                        h1
+                            a(href="/article/#{article._id}") #{article.title}
+                        p
+                            span.glyphicon.glyphicon-user #{article.author}
+                            span.glyphicon.glyphicon-time #{moment(article.updateAt).format('MM/DD/YYYY')}
+                    .article-content
+                        !{article.content}

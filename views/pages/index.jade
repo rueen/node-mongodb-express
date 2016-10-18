@@ -1,0 +1,17 @@
+extend ../layout
+
+block content
+    .container.content
+        .row
+            each item in articles
+                .col-md-2
+                    .thumbnail
+                        .caption
+                            h3.title
+                                a(href="/article/#{item._id}", target="_blank") #{item.title}
+                            p.introduction #{item.desc}
+                            p
+                                span.glyphicon.glyphicon-user #{item.author}
+                                span.glyphicon.glyphicon-time #{moment(item.updateAt).format('MM/DD/YYYY')}
+                            .text-right
+                                a.ui-btn(href="/article/#{item._id}", target="_blank", role="button") 阅读全文

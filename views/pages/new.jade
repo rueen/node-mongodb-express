@@ -1,0 +1,25 @@
+extend ../layout
+
+block content
+    .container
+        .row
+            form.form-horizontal(method="post", action="/control/new")
+                input(type="hidden", name="article[_id]", value="#{article._id}")
+                .form-group
+                    label.col-sm-2.control-label(for="inputTitle") 标题
+                    .col-sm-10
+                        input#inputTitle.form-control(type="text", name="article[title]", value="#{article.title}")
+                .form-group
+                    label.col-sm-2.control-label(for="inputAuthor") 作者
+                    .col-sm-10
+                        input#inputAuthor.form-control(type="text", name="article[author]", value="#{article.author}")
+                .form-group
+                    label.col-sm-2.control-label(for="textareaDesc") 摘要
+                    .col-sm-10
+                        textarea#textareaDesc.form-control(name="article[desc]") #{article.desc}
+                .form-group
+                    label.col-sm-2.control-label(for="textareaContent") 内容
+                    .col-sm-10
+                        textarea#textareaContent.form-control(name="article[content]") #{article.content}
+                .col-sm-offset-2.col-sm-10
+                    button.btn.btn-primary(type="submit") 提交
